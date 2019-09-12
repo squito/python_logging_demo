@@ -1,0 +1,28 @@
+version: 1
+root:
+  level: DEBUG
+  handlers:
+    - console
+    - file
+formatters:
+  standard:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+handlers:
+  console:
+    class : logging.StreamHandler
+    formatter: standard
+    level   : INFO
+  file:
+    class : logging.FileHandler
+    level : DEBUG
+    formatter: standard
+    filename: dex.log
+loggers:
+  "__main__":
+    propagate: True
+  "foo":
+    propagate: True
+  "flim.flam":
+    propagate: True
+  "ooga.booga.wakka":
+    propagate: True
