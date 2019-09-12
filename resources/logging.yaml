@@ -17,12 +17,3 @@ handlers:
     level : DEBUG
     formatter: standard
     filename: dex.log
-loggers:
-  "__main__":
-    propagate: True
-  "foo":
-    propagate: True
-  "flim.flam":
-    propagate: True
-  "ooga.booga.wakka":
-    propagate: True
